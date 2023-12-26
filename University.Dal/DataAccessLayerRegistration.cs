@@ -13,6 +13,7 @@ public static class DataAccessLayerRegistration
     {
         services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
+        services.AddScoped(typeof(IRepository<>), typeof(EfCoreRepository<>));
         services.AddScoped<IStudentRepository, StudentRepository>();
 
         return services;

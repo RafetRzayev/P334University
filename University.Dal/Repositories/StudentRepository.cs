@@ -1,4 +1,5 @@
-﻿using University.Dal.DataContext;
+﻿using Microsoft.EntityFrameworkCore;
+using University.Dal.DataContext;
 using University.Dal.DataContext.Entities;
 using University.Dal.Repositories.Contracts;
 
